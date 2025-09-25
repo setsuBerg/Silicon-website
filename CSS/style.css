@@ -85,10 +85,6 @@ body {
     color: var(--color-body-text);
     background-color: var(--color-body-background);
 }
-/*
-h1,h2.h3,h4,h5,h6 {
-    color: var(--color-heading-text);
-}*/
 
 .btn {
     display: flex;
@@ -163,6 +159,8 @@ h1,h2.h3,h4,h5,h6 {
     outline: 2px solid #fff;
     outline-offset: 2px;
 }
+
+/* Header for mobile done: toggle spacing and aria-current fixed.*/
 
 header {
     background: var(--color-header-background);
