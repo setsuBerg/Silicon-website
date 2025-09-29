@@ -288,3 +288,132 @@ nav {
     }
     
 }
+
+#hero {
+    position: relative;
+    isolation: isolate;
+    background: none;
+    padding-block: clamp(56px, 14vw, 144px);
+
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        width: 100vw;
+        background-color: var(--color-hero-background);
+        background-image: var(--color-hero-gradient);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        z-index: -1;
+    }
+
+    .hero-title {
+        color: var(--color-heading-text);
+        font-weight: 800;
+        font-size: clamp(34px, 7vw, 56px); /* mobile:34.1, tablet: 44.3, desktop: 56 */
+        line-height: 1.4;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    .hero-title2 {
+        display: block;
+    }
+    .hero-text, .hero-text-under {
+        font-size: 16px;
+        line-height: 1.6;
+        max-width: 50ch; /*ingen effekt om text-align har skrivits in.. tredije måste vara från your pocket i mobil läge*/
+        text-wrap: balance;
+        margin-inline: auto;
+        text-align: center;
+    }
+    .hero-text-under {
+        margin-bottom: 50px;
+    }
+    .pocket {
+        display: inline;
+        white-space: nowrap;
+    }
+
+    @media (width < 768px) {
+        .pocket {
+            display: block;
+        } 
+    }
+
+    @media (width >= 768px) {
+        .hero-title {
+        text-align: left;
+        font-size: clamp(40px, 5vw, 60px);
+        }
+    }
+
+    @media (width >= 1200px) {
+        .hero-title {
+        text-align: left;
+        font-size: 56px;
+        }
+    }
+
+    .hero-icons {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-top: 1rem;
+    }
+    .hero-icons a {
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: center;
+        align-items: center;
+        column-gap: 12px;
+        width: 100%;
+        padding: 12px 16px;
+        border-radius: 12px;
+        background-color: #131022;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .hero-icons a img {
+        width: auto;
+        height: 30px;
+        grid-column: 1;
+        grid-row: 1 / span 2;
+    };
+
+    .apple-text1, .google-text1 {
+        font-size: 10px;
+        line-height: 1.2;
+        font-weight: 300;
+
+    }
+    .apple-text2, .google-text2 {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.1;
+    }
+
+    .btn-google {
+        margin-bottom: 100px;
+    }
+
+}
+
+#features {
+    .br-sm {
+        display: inline;
+    }
+    @media ( width < 768px ) {
+        .br-sm {
+            display: block;
+        }
+    }
+
+}
