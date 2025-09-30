@@ -6,6 +6,6 @@ Branch: `header-section` --> merged to `main`.
 
 ## Branches
 - header-section - merged
-- hero-section - 
+- hero-section - merged
 - brands-section - TODO after mobile all done
 - features-section - merged
